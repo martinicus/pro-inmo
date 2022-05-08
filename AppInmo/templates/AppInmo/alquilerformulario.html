@@ -1,0 +1,29 @@
+
+{% extends "AppInmo/padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<h2>Completa todos los campos!</h2>
+
+<form action="{% url 'alquilerformulario' %}" method="POST">{% csrf_token %}
+
+    <p>Tipo: <input type="text" name="tipo"></p>
+    <p>Metros: <input type="number" name="metros"></p>
+    <p>Ambiente: <input type="number" name="ambientes"></p>
+    <p>Antigüedad: <input type="number" name="antiguedad"></p>
+    <p>Ubicacion: <input type="text" name="ubicacion"></p>
+
+    <input type="submit" value="Enviar formulario">
+
+
+</form>
+
+{% endblock %}
+
+{% block titulo %}
+
+
+{% endblock %}
+
